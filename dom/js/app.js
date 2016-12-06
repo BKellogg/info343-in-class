@@ -24,7 +24,7 @@ females.sort(descending(compareByCount));
 console.log(females.length);
 
 var males = BABYNAMES.filter(compareSex("M"));
-males.sort(descending(compareByCount));
+males.sort(descending(compareByCount)); 
 console.log(males.length);
 
 //BABYNAMES.sort(descending(compareByCount));

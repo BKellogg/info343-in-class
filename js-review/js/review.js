@@ -110,7 +110,8 @@ logValue("2016-10-27", formatAsDate);
 var someNumber = 123456789;
 //logValue(...)
 
-
+logValue(someNumber, formatAsNumber);
+logValue(someNumber, formatAsCurrency);
 
 
 
@@ -190,7 +191,9 @@ console.log("property names:", propNames);
  * see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
  */
 
-
+propNames.forEach(function(name) {
+    console.log(name, " = ", course[name]);
+})
 
 
 
@@ -351,6 +354,19 @@ console.log("Total count", formatAsNumber(totalCount));
  * just reverse the logic in your compare function.
  */
 
+males.sort(function(rec1, rec2) {
+    return -(rec1.count - rec2.count);
+});
+
+var mostPopulatMaleRecs = males.slice(0,10);
+
+males = males.map(function(rec) {
+    return rec.name;
+});
+
+var MostpopularMaleNames = mostPopulatMaleRecs.map(function(rec) {
+    return rec.name;
+});
 
 
 /**
